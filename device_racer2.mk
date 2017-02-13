@@ -5,12 +5,11 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/zte/racer2/overlay
 
-
-#ifeq ($(TARGET_PREBUILT_KERNEL),)
-#	LOCAL_KERNEL := device/zte/racer2/recovery_kernel_gen1
-#else
-#	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-#endif
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := device/zte/racer2/prebuilts/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
