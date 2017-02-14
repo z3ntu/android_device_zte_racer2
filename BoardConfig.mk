@@ -31,7 +31,7 @@ BOARD_CACHE_DEVICE := /dev/block/mtdblock10
 BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := rw
 
-#BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/racer2/recovery/recovery_ui.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/racer2/recovery/recovery_keys.c
 
 BOARD_LDPI_RECOVERY := true
 
